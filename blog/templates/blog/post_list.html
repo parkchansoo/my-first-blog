@@ -8,5 +8,15 @@
 		<h1>first charter type</h1>
 		<a href="www.naver.com"> go naver </a>
 	</div>
+	{% for post in posts %}
+	<div>
+		<p>published : {{ post.published_date }}</p>
+		<h1><a href="">{{ post.title }}</a></h1>
+		<p>{{ post.text|linebreaksbr }}</p>
+	</div>
+	{% endfor %}
+	<div>
+		<a href="http://mail.kaist.ac.kr">another link</a>
+	</div>
 </body>
 </html>
